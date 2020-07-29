@@ -1,9 +1,7 @@
-branch_name=githubashim
-
 node {
     checkout scm
 
-    docker.withRegistry('https://github.com/ashimgrg/docker-react.git', ${env.branch_name}) {
+    docker.withRegistry('https://github.com/ashimgrg/docker-react.git', ‘githubashim‘) {
 
         def customImage = docker.build("ashimgrg/docker-react")
 
