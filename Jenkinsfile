@@ -1,7 +1,7 @@
 node {
     checkout scm
 
-    docker.withRegistry('https://github.com/ashimgrg/docker-react.git', githubashim) {
+    docker.withRegistry('https://github.com/ashimgrg/docker-react.git', ‘githubashim‘) {
 
         def customImage = docker.build("ashimgrg/docker-react")
 
